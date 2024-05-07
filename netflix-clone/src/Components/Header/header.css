@@ -12,31 +12,71 @@
   transition-timing-function: ease-in;
   z-index: 1;
   cursor: pointer;
+  overflow: hidden;
 }
+
 .nav_black {
   background-color: rgb(20, 20, 20);
 }
+
 .header_container {
   width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .header_left ul {
   width: 140%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .header_left ul li {
   list-style: none;
 }
+
 .header_right ul {
   width: 140%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .header_right ul li {
   list-style: none;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+  .header_container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .header_left ul {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  }
+
+  .header_left ul::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+  }
+
+  .header_right ul {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header_left ul li {
+    white-space: nowrap;
+    padding-right: 10px;
+    font-size: 12px;
+  }
 }
