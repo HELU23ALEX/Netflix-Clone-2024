@@ -4,79 +4,97 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background-color: rgb(148, 132, 132); */
   background-color: rgb(20, 20, 20);
-  background-color: transparent;
+  /* background-color: transparent; */
   height: 10vh;
   color: white;
   transition: all 0.5s;
   transition-timing-function: ease-in;
   z-index: 1;
-  cursor: pointer;
-  overflow: hidden;
+  /* background-color: red; */
 }
-
-.nav_black {
-  background-color: rgb(20, 20, 20);
-}
-
+/* .nav__black{
+    background-color:  rgb(20, 20, 20);
+} */
 .header_container {
   width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* background-color: yellow; */
 }
-
 .header_left ul {
   width: 140%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.header_left ul li {
   list-style: none;
+  cursor: pointer;
+  /* background-color: lightblue; */
 }
-
 .header_right ul {
-  width: 140%;
+  width: 150%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header_right ul li {
+  justify-content: space-around;
   list-style: none;
+  cursor: pointer;
+  /* background-color: lightgreen; */
 }
-
-/* Responsive Styles */
 
 @media screen and (max-width: 768px) {
-  .header_container {
-    width: 100%;
-    padding: 0 20px;
+  /* Adjust header height for smaller screens */
+  .header_outer_Container {
+    height: 5vh;
+    overflow: hidden;
   }
 
-  .header_left ul {
-    width: 100%;
-    overflow-x: auto;
-    padding-bottom: 10px;
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-  }
-
-  .header_left ul::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
-  }
-
+  /* Adjust list item widths proportionally for better layout */
+  .header_left ul,
   .header_right ul {
-    width: auto;
+    /* width: auto; Remove fixed widths */
+    width: 100%;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+
+  /* Optionally, adjust font sizes or other styles for better readability */
+  .header_outer_Container,
+  .header_container,
+  .header_left ul li,
+  .header_right ul li {
+    font-size: 0.5rem; /* Example adjustment */
+    /* justify-content: space-between; */
   }
 }
 
-@media screen and (max-width: 480px) {
-  .header_left ul li {
-    white-space: nowrap;
-    padding-right: 10px;
-    font-size: 12px;
+/* mobile */
+
+@media screen and (max-width: 768px) {
+  /* Adjust header height for smaller screens */
+  .header_outer_Container {
+    height: 5vh;
+    overflow: hidden;
+  }
+
+  /* Adjust list item widths proportionally for better layout */
+  .header_left ul,
+  .header_right ul {
+    /* width: auto; Remove fixed widths */
+    width: 100%;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+
+  /* Optionally, adjust font sizes or other styles for better readability */
+  .header_outer_Container,
+  .header_container,
+  .header_left ul li,
+  .header_right ul li {
+    font-size: 0.5rem; /* Example adjustment */
+    /* justify-content: space-between; */
   }
 }
+
+
+

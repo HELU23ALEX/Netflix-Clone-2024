@@ -3,6 +3,7 @@
   color: grey;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .footer_inner_container {
@@ -39,8 +40,8 @@
   align-items: center;
   justify-content: center;
   border: #fff;
-  border-style: inset;
-  width: 12%;
+  border-style: solid;
+  width: fit-content;
   margin: 15px 0;
   cursor: pointer;
 }
